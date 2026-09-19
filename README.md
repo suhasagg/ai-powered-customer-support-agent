@@ -77,5 +77,3 @@ PYTHONPATH=. pytest -q
 ## Production evolution
 
 For a production portfolio, replace the local stores with PostgreSQL/Redis, TF-IDF with hybrid BM25 + vector retrieval and a reranker, and add an LLM planner with structured tool schemas. Add OAuth/OIDC, per-tool RBAC, policy engine, idempotency keys, durable workflows, Kafka, human-in-the-loop approvals, PII redaction, prompt-injection defenses, OpenTelemetry traces, evaluation datasets, groundedness/tool-call metrics, Kubernetes, autoscaling, circuit breakers and SLO dashboards. Keep the tool execution layer deterministic even when an LLM chooses a tool.
-
-A strong resume framing is: **Architected an agentic customer-support platform combining grounded RAG, policy-controlled tool execution, human approval for state-changing operations, workflow automation and an enterprise Java API boundary.**
