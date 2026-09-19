@@ -1,0 +1,10 @@
+services:
+  agent:
+    build: ./python-service
+    ports: ["8000:8000"]
+  gateway:
+    build: ./java-service
+    environment:
+      AGENT_BASE_URL: http://agent:8000
+    ports: ["8080:8080"]
+    depends_on: [agent]

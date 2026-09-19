@@ -1,0 +1,17 @@
+### Knowledge question
+POST http://localhost:8080/api/support/chat
+Content-Type: application/json
+
+{"customer_id":"cust-1001","conversation_id":"demo","message":"What is your return policy?","allow_actions":false}
+
+### Tool call: order lookup
+POST http://localhost:8080/api/support/chat
+Content-Type: application/json
+
+{"customer_id":"cust-1001","message":"Where is ORD-501?","allow_actions":false}
+
+### Approval-gated refund
+POST http://localhost:8080/api/support/chat
+Content-Type: application/json
+
+{"customer_id":"cust-1001","message":"Refund ORD-502","allow_actions":true}
